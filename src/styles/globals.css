@@ -1,0 +1,474 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Print styles */
+@media print {
+  @page {
+    margin: 0.3in 0.4in;
+    size: letter;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white !important;
+    font-size: 9px !important;
+  }
+
+  /* Print header styling */
+  .print-header {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .print-header h2 {
+    font-size: 12px !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .print-header p {
+    font-size: 8px !important;
+  }
+
+  .print-day-header h3 {
+    font-size: 10px !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Adjust grid for printing - 3 columns for weekly readings (6 bungalows per page) */
+  .weekly-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.3rem !important;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .page-section {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust grid for daily readings */
+  .grid:not(.weekly-grid) {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Make cards very compact */
+  .p-6 {
+    padding: 0.25rem !important;
+  }
+
+  .p-4 {
+    padding: 0.2rem !important;
+  }
+
+  .p-3 {
+    padding: 0.15rem !important;
+  }
+
+  /* Reduce all margins */
+  .mb-8 {
+    margin-bottom: 0.25rem !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 0.2rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 0.15rem !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 0.1rem !important;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.1rem !important;
+  }
+
+  .mb-1 {
+    margin-bottom: 0.05rem !important;
+  }
+
+  .gap-2 {
+    gap: 0.1rem !important;
+  }
+
+  /* Compact typography */
+  h1 {
+    font-size: 12px !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  h2 {
+    font-size: 11px !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  h3 {
+    font-size: 10px !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  p, label, input, span {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Compact inputs and badges */
+  input {
+    padding: 0.1rem !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* Badges */
+  .inline-flex {
+    font-size: 7px !important;
+    padding: 0.05rem 0.2rem !important;
+  }
+
+  /* Card borders */
+  .border-2 {
+    border-width: 1px !important;
+  }
+
+  .rounded-md {
+    border-radius: 2px !important;
+  }
+
+  /* Avoid page breaks inside cards */
+  .card,
+  [class*='Card'],
+  [class*='card'] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Remove extra padding from root containers */
+  .min-h-screen {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .bg-slate-50,
+  .bg-slate-100 {
+    background: white !important;
+  }
+
+  /* Weekly card specific styles */
+  .weekly-card {
+    padding: 0.3rem !important;
+  }
+
+  .weekly-card h3 {
+    font-size: 10px !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .daily-ref {
+    padding: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .daily-ref p {
+    font-size: 8px !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .field-label {
+    font-size: 8px !important;
+    display: block;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .lsi-result {
+    margin-top: 0.2rem !important;
+    padding: 0.2rem !important;
+  }
+
+  .lsi-label {
+    font-size: 8px !important;
+  }
+
+  .lsi-comment {
+    font-size: 7px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Hide placeholders in print */
+  ::placeholder {
+    opacity: 0 !important;
+  }
+
+  /* Treatment grid - 5 columns to fit all 10 on one page */
+  .treatment-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Treatment card specific styles */
+  .treatment-card {
+    padding: 0.2rem !important;
+  }
+
+  .treatment-card h3 {
+    font-size: 9px !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  .treatment-instruction {
+    font-size: 7px !important;
+  }
+
+  .treatment-card .flex {
+    font-size: 7px !important;
+  }
+
+  .treatment-card .text-slate-600,
+  .treatment-card .bg-white {
+    font-size: 7px !important;
+  }
+
+  .treatment-card .p-3 {
+    padding: 0.2rem !important;
+  }
+
+  .treatment-card .p-2 {
+    padding: 0.15rem !important;
+  }
+
+  .treatment-card .mb-3 {
+    margin-bottom: 0.15rem !important;
+  }
+
+  .treatment-card .mt-2 {
+    margin-top: 0.1rem !important;
+  }
+
+  .treatment-card .mb-1 {
+    margin-bottom: 0.05rem !important;
+  }
+
+  .treatment-guide-section {
+    font-size: 7px !important;
+    padding: 0.2rem !important;
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    margin-bottom: 0.3rem !important;
+    page-break-inside: avoid;
+  }
+
+  .treatment-guide-section strong {
+    font-size: 7px !important;
+  }
+
+  .treatment-guide-section > div {
+    gap: 0.15rem !important;
+  }
+
+  .treatment-guide-section .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
